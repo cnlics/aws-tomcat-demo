@@ -24,17 +24,17 @@ public class UserController
         List<User> users = new ArrayList<>();
         
         User u1 = new User();
-        u1.setId(1l);
-        u1.setName("User 1 Lakshitha");
+        u1.setId(333l);
+        u1.setName("User 1 Lakshitha Herath");
         u1.setUsername("lakshitha");
         u1.setAddress("Colombo 06");
         
         
         User u2 = new User();
-        u2.setId(1l);
+        u2.setId(777l);
         u2.setName("User 2 Prageeth");
         u2.setUsername("prageeth");
-        u2.setAddress("Matale");
+        u2.setAddress("Matale, Sri Lanka");
         
         
         users.add(u1);
