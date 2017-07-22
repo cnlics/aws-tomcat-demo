@@ -21,7 +21,7 @@ public class UserController
 {
 	
 	
-    @RequestMapping(method=RequestMethod.GET, path = "/health")
+    @RequestMapping(method=RequestMethod.GET, path = "/healthcheck")
     public ResponseEntity<Response> health()
     {
         Response r = new Response(true, "ok");
