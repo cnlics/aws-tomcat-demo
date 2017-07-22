@@ -4,9 +4,10 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - mvn clean package -Dmaven.test.skip=true 
+      - mvn clean package -Dmaven.test.skip=true
+      - mv target/aws-tomcat-demo-0.0.1.war target/aws-tomcat-demo.war
 artifacts:
   files:
-    - target/aws-tomcat-demo-0.0.1.war
+    - target/aws-tomcat-demo.war
     - appspec.yml
   discard-paths: yes
