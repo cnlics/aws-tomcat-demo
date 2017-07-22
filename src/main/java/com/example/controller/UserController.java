@@ -41,7 +41,7 @@ public class UserController
         
         User u1 = new User();
         u1.setId(333l);
-        u1.setName("User 1 Lakshitha Herathhhhhhhhhhhhhhhhh");
+        u1.setName("User 1 Lakshitha TESTING");
         u1.setUsername(ip);
         u1.setAddress("Colombo 06");
         
