@@ -1,6 +1,8 @@
 package com.example.controller;
 
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,15 +20,29 @@ import com.example.pojo.User;
 public class UserController 
 {
 	
-    @RequestMapping(method=RequestMethod.GET, path = "/users")
-    public ResponseEntity<Response> getUsers()
+	
+    @RequestMapping(method=RequestMethod.GET, path = "/health")
+    public ResponseEntity<Response> health()
     {
+        Response r = new Response(true, "ok");
+        return new ResponseEntity<Response>(r,HttpStatus.OK);
+    }
+	
+	
+    @RequestMapping(method=RequestMethod.GET, path = "/users")
+    public ResponseEntity<Response> getUsers() throws UnknownHostException
+    {
+    	
+	    	InetAddress addr = InetAddress.getLocalHost();
+	    String ip = addr.getHostAddress();
+
+    	
         List<User> users = new ArrayList<>();
         
         User u1 = new User();
         u1.setId(333l);
         u1.setName("User 1 Lakshitha Herath");
-        u1.setUsername("lakshitha");
+        u1.setUsername(ip);
         u1.setAddress("Colombo 06");
         
         
